@@ -8,18 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect("mongodb://127.0.0.1:27017/usersData")  //this is for locally when you use compass
-// const connection = async() =>{
-
-
-//     try{
-//        await mongoose.connect("mongodb+srv://indurevaibhav9:Vaibhav*18@crudoperation.2x1t78g.mongodb.net/?retryWrites=true&w=majority&appName=crudOperation", {useUnifiedTopology: true})
-//         console.log('database conndect successfully')
-//     }catch(e){
-//         console.log('error while connecting database' ,e)
-//     }
-// }
-
-// connection();
 
 app.get('/', (req, res) =>{
     UserModel.find({})
